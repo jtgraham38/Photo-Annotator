@@ -43,6 +43,16 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'nextcloud' => [
+            'driver' => 'nextcloud',
+            'url' => env('NEXTCLOUD_URL'),
+            'webdav_url' => env('NEXTCLOUD_WEBDAV_URL'),
+            'webdav_path' => env('NEXTCLOUD_WEBDAV_PATH'),
+            'webdav_user' => env('NEXTCLOUD_WEBDAV_USER'),
+            'webdav_password' => env('NEXTCLOUD_WEBDAV_PASSWORD'),
+            'visibility' => 'public',
+            'throw' => false,
+        ],
 
         's3' => [
             'driver' => 's3',
