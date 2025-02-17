@@ -11,7 +11,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <h1 class="text-2xl text-gray-800 dark:text-gray-200 text-center">
-                Upload an Image
+                Upload Photos
             </h1>
             <hr>
             <div class="p-4 sm:p-8 ">

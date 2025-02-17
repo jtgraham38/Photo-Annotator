@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('image_records', function (Blueprint $table) {
+        Schema::create('photo_records', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('mime_type');
+            $table->string('size');
             $table->string('path');
+            $table->string('disk');
+            $table->tinyinteger('approved')->default(1);
             $table->timestamps();
         });
     }
