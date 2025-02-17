@@ -45,13 +45,10 @@ return [
         ],
         'nextcloud' => [
             'driver' => 'nextcloud',
-            'url' => env('NEXTCLOUD_URL'),
             'webdav_url' => env('NEXTCLOUD_WEBDAV_URL'),
             'webdav_path' => env('NEXTCLOUD_WEBDAV_PATH'),
             'webdav_user' => env('NEXTCLOUD_WEBDAV_USER'),
-            'webdav_password' => env('NEXTCLOUD_WEBDAV_PASSWORD'),
-            'visibility' => 'public',
-            'throw' => false,
+            'webdav_password' => env('NEXTCLOUD_WEBDAV_PASSWORD')
         ],
 
         's3' => [
