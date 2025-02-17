@@ -30,6 +30,5 @@
         </div>
         
         <x-flash-messages />
-        asdf
     </body>
 </html>
