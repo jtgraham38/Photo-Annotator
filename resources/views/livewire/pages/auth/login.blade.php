@@ -56,17 +56,25 @@ new #[Layout('layouts.guest')] class extends Component
                 <span class="ms-2 text-sm text-surface-600 dark:text-surface-400">{{ __('Remember me') }}</span>
             </label>
         </div>
+        
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-surface-800" href="{{ route('password.request') }}" wire:navigate>
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
 
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
+        <div class="flex items-center justify-between mt-4">
+            <a href="{{ route('home') }}" class="underline text-sm text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-surface-800">
+                <i class="fa fa-home mr-1"></i>
+                {{ __('Home')}}
+            </a>
+            <div>
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-surface-800" href="{{ route('password.request') }}" wire:navigate>
+                        {{ __('Forgot your password?') }}
+                    </a>
+                @endif
+    
+                <x-primary-button class="ms-3">
+                    {{ __('Log in') }}
+                </x-primary-button>
+            </div>
         </div>
     </form>
 </div>
