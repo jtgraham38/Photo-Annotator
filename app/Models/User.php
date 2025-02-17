@@ -42,4 +42,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    
+    //indicates whether the user's account has been approved
+    public function isApproved(): bool
+    {
+        return $this->role != 'unapproved';
+    }
 }
