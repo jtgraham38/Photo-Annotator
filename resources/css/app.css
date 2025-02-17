@@ -4,5 +4,13 @@
 
 
 .error {
-    color: red;
+    @apply text-danger-600 dark:text-danger-400;
+}
+
+.info {
+    @apply text-info-600 dark:text-info-400;
+}
+
+.success {
+    @apply text-success-600 dark:text-success-400;
 }
