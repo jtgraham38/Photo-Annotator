@@ -6,8 +6,8 @@ cd /var/www/html
 # Install PHP dependencies
 composer install --no-dev
 
-# Install Node.js dependencies
-npm install --production
+# Install Node.js dependencies (all to run a vite build)
+npm install
 
 # Build javascript/css dependencies
 npm run build
