@@ -34,7 +34,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Install npm
 RUN curl -sL https://deb.nodesource.com/setup_21.x | bash -
-RUN apt install nodejs -y
+RUN apt-get install nodejs -y
 
 # Set correct permissions
 RUN chown -R www-data:www-data /var/www/html \
