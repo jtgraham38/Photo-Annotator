@@ -33,8 +33,8 @@ COPY . /var/www/html
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install npm
-RUN curl -sL https://deb.nodesource.com/setup_21.x | bash -
-RUN apt-get install nodejs -y
+RUN curl -sL https://deb.nodesource.com/setup_21.x | bash - \
+    && apt-get install nodejs -y
 
 # Set correct permissions
 RUN chown -R www-data:www-data /var/www/html \
