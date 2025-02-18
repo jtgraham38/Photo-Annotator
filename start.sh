@@ -15,5 +15,10 @@ npm run build
 # Run migrations
 php artisan migrate
 
+# generate an application key, if one does not exist
+if ! grep -q "APP_KEY=base64:" .env; then
+    php artisan key:generate
+fi
+
 # Start Apache
 apache2-foreground
