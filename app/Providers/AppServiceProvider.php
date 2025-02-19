@@ -27,6 +27,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // force https in production
+        if(env('APP_ENV', 'production') == 'production') { // use https only if env is production
+            \URL::forceScheme('https')
+        }
+
         //register nextcloud file system driver (webdav)
         Storage::extend('nextcloud', function ($app, $config) {
             $client = new Client([
