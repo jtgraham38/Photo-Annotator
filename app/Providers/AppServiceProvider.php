@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // force https in production
         if(env('APP_ENV', 'production') == 'production') { // use https only if env is production
-            \URL::forceScheme('https')
+            \URL::forceScheme('https');
         }
 
         //register nextcloud file system driver (webdav)
