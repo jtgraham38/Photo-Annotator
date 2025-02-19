@@ -20,5 +20,8 @@ if ! grep -q "APP_KEY=base64:" .env; then
     php artisan key:generate
 fi
 
+# run optimization script
+php artisan optimize
+
 # Start Apache
 apache2-foreground
