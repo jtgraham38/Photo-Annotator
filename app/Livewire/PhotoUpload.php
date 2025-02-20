@@ -24,7 +24,7 @@ class PhotoUpload extends Component
         ]);
 
         //get the disk to store the photos on
-        $disk = env('DEFAULT_STORAGE_DISK');
+        $disk = env('DEFAULT_STORAGE_DISK', 'nextcloud');
  
         // Store photos on nextcloud
         foreach ($this->photos as $photo) {
