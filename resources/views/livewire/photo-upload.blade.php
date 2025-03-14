@@ -1,4 +1,4 @@
-<form wire:submit.prevent="save" class="grid palce-items-center">
+<form wire:submit.prevent="save" class="grid place-items-center">
     @csrf
     <div wire:loading.delay.shortest wire:target="save" class="grid place-items-center">
         <div role="status">
